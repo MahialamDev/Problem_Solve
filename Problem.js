@@ -69,9 +69,57 @@ function findMax(array) {
 // console.log(findMax([4,8,9,2,80]))
 
 
+
+// Problem 05
+
 function removeDuplicate(array) {
-  
+  let nonDuplicate = [];
+
+  for (let i = 0; array.length > i; i++){
+    if(!nonDuplicate.includes(array[i]))
+    nonDuplicate.push(array[i])
+  }
+
+  return nonDuplicate;
   
 }
 
-console.log(removeDuplicate([1,1,5,2,3,4,5]))
+// console.log(removeDuplicate([1, 1, 5, 2, 3, 4, 5, 6, 6, 6]));
+
+
+
+// Problem 06
+
+function sumOfArray(array) {
+  
+  let sum = 0;
+
+  for (let i = 0; array.length > i; i++){
+    sum = array[i] + sum;
+  }
+
+
+  return sum;
+}
+
+// console.log(sumOfArray([1,2,3,4,5,20]))
+
+
+// Problem 7: Find Even Numbers in an Array
+
+function findEven(array) {
+  let evenNumbers = [];
+
+  for (let i = 0; array.length > i; i++){
+    const even = array[i] % 2;
+
+    if (even === 0) {
+      evenNumbers.push(array[i])
+    }
+  }
+
+    
+  return evenNumbers;
+}
+
+console.log(findEven([2, 5, 7, 10, 15, 30]))
