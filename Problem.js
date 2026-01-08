@@ -11,6 +11,8 @@ function reverseString(str) {
 // console.log(reverseString("Mahialam")); // olleh
 
 
+
+
 // Problem 02
 function countVowels(word) {
   let count = 0;
@@ -28,6 +30,10 @@ function countVowels(word) {
 }
 
 // console.log(countVowels("Jamalpurei"))
+
+
+
+
 
 
 
@@ -51,6 +57,10 @@ function palindrom (word) {
 
 
 
+
+
+
+
 // Problem 04
 function findMax(array) {
 
@@ -67,6 +77,9 @@ function findMax(array) {
 }
 
 // console.log(findMax([4,8,9,2,80]))
+
+
+
 
 
 
@@ -88,6 +101,9 @@ function removeDuplicate(array) {
 
 
 
+
+
+
 // Problem 06
 
 function sumOfArray(array) {
@@ -103,6 +119,10 @@ function sumOfArray(array) {
 }
 
 // console.log(sumOfArray([1,2,3,4,5,20]))
+
+
+
+
 
 
 // Problem 7: Find Even Numbers in an Array
@@ -122,4 +142,73 @@ function findEven(array) {
   return evenNumbers;
 }
 
-console.log(findEven([2, 5, 7, 10, 15, 30]))
+// console.log(findEven([2, 5, 7, 10, 15, 30]))
+
+
+
+
+// Problem 8: Capitalize First Letter of Each Word
+function capitalize(str) {
+  let convertArray = str.split(' ');
+  let CapitalizeFirstLetter = [];
+
+
+  function capitalizeWord(word) {
+    const cap = word.split('');
+    const rt = cap[0].toUpperCase();
+    const ok = [...cap]
+    const ok2 = ok.shift()
+    const result = rt+ok.join('')
+    return result;
+
+  }
+  
+  for (let i = 0; convertArray.length > i; i++){
+
+     
+    CapitalizeFirstLetter.push(capitalizeWord(convertArray[i]))
+    
+  }
+  
+  return CapitalizeFirstLetter.join(' ');
+}
+
+// console.log(capitalize("my name is mahialam rahat"))
+
+
+
+
+// Problem 9: Find the Factorial of a Number
+
+function factorial(num) {
+  let result = 1;
+
+  for (let i = 1; i <= num; i++){
+    result = i * result;
+  }
+
+  return result;
+}
+
+// console.log(factorial(3))
+
+
+
+
+// Problem 10: PingPong Challenge
+
+function pingPong() {
+  for (let i = 1; i <= 20; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("PingPong");
+    } else if (i % 3 === 0) {
+      console.log("Ping");
+    } else if (i % 5 === 0) {
+      console.log("Pong");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+pingPong();
